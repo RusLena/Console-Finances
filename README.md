@@ -57,19 +57,4 @@ index.js:132 Average Change: $-2315.12
 index.js:133 Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
 index.js:134 Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
 index.js:135 ```
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-A screenshot of the console output displaying the financial analysis results:
-Console-Finances/images/Console-Finances.PNG 
-Deployment Link:....
-
-Application GitHub URL:git@github.com:RusLena/Bootstrap-Portfolio.git
-
-Conclusion
-This project was difficult for a beginner, as I am just starting to learn the basics of JavaScript.
-The project turned out to be difficult not only for my programming skills, but also because for the first time I had to analyze the financial records of the company, which together was a very difficult task.
-So I had to do a lot of research to finish the project.
-
- Best regards, 
-
- Elena
