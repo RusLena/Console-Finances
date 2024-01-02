@@ -86,13 +86,50 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
-function financialAnalysis(finances) {
-let totalNumberOfMonths = finances.length;   // Get the length of the array 
-let netProfitLoss = 0;    // Keep track of the total amount of money each month
-let totalChange = 0;     // Keep track of all of the changes each month
-let lastMonthVal = 0;   // Used to keep the value of last months value to perform calculation for change
-let greatestIncrease = { date: "", amount: 0 };
-let greatestDecrease = { date: "", amount: 0 };
- // Loop through the list to calculate totals and find greatest decrease/increase
-for (let i = 0; i < totalNumberOfMonths; i++) {}
-}
+
+  let totalNumberOfMonths = finances.length;
+  let netProfitLoss = 0;
+  let totalChange = 0;
+  let greatestIncrease = { date: "", value: 0 };
+  let greatestDecrease = { date: "", value: 0 };
+
+  // Variables to store the months of greatest increase/decrease
+  let monthOfGreatestIncrease = "";
+  let monthOfGreatestDecrease = "";
+  // Loop through the list
+  for (let i = 0; i < totalNumberOfMonths; i++) {
+    const monthlyRecord = finances[i];
+    const currentValue = monthlyRecord[1];
+    netProfitLoss += currentValue;
+
+    if (i > 0) {
+      const previousValue = finances[i - 1][1];
+      const change = currentValue - previousValue;
+      totalChange += change;
+
+      // Greatest increase/decrease, date and the difference in the month
+      if (change > greatestIncrease.value) {
+        greatestIncrease.date = monthlyRecord[0];
+        greatestIncrease.value = change;
+        monthOfGreatestIncrease = monthlyRecord[0];
+      }
+
+      if (change < greatestDecrease.value) {
+        greatestDecrease.date = monthlyRecord[0];
+        greatestDecrease.value = change;
+        monthOfGreatestDecrease = monthlyRecord[0];
+      }
+    }
+  }
+// Rounded to the nearest 100th
+  const averageChange = (totalChange / (totalNumberOfMonths - 1)).toFixed(2);
+  console.log("``` text")
+  console.log("Financial Analysis");
+  console.log("----------------");
+  console.log("Total Months:", totalNumberOfMonths);
+ // Concatenation achieved by using the '+' operator 
+  console.log("Total: $" + netProfitLoss);
+  console.log("Average Change: $" + averageChange);
+  console.log("Greatest Increase in Profits/Losses:", monthOfGreatestIncrease, "($" + greatestIncrease.value + ")");
+  console.log("Greatest Decrease in Profits/Losses:", monthOfGreatestDecrease, "($" + greatestDecrease.value + ")");
+  console.log("```")
