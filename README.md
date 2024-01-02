@@ -53,7 +53,7 @@ Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
 ```
 
 Conclusion
-This project was difficult for a beginner, as I am just starting to learn the basics of JavaScript. The project turned out to be difficult not only for my programming skills, but also because for the first time I had to analyze the financial records of the company, which together was a very difficult task. So I had to do a lot of research to finish the project.
+This project was really challenging for a beginner, as I am just starting to learn the basics of JavaScript. The project turned out to be difficult not only for my programming skills, but also because for the first time I had to analyze the financial records of the company, which together was a very complicated task. So I had to do a lot of research to finish the project.
 
  Best regards, 
 
